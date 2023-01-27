@@ -1,0 +1,54 @@
+let allTones4000 = [
+    131,
+    147,
+    165,
+    175,
+    196,
+    220,
+    247,
+    262,
+    294,
+    330,
+    349,
+    392,
+    440,
+    494,
+    523,
+    587,
+    659,
+    698,
+    784,
+    880,
+    988
+]
+
+namespace music {
+
+    /**
+     * Plays a random tone.
+     */
+    //% group="Tone"
+    //% block
+    export function playRandomTone() {
+        music.playTone(allTones4000._pickRandom(), music.beat(BeatFraction.Half))
+    }
+
+    /**
+    * Plays a random low tone.
+    */
+    //% group="Tone"
+    //% block
+    export function playRandomLowTone() {
+        music.playTone(allTones4000[randint(1, 10)], music.beat(BeatFraction.Half))
+    }
+
+    /**
+   * Plays a random high tone.
+   */
+    //% group="Tone"
+    //% block
+    export function playRandomHighTone() {
+        music.playTone(allTones4000[randint(11, 21)], music.beat(BeatFraction.Half))
+    }
+}
+
